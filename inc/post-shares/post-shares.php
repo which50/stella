@@ -12,7 +12,6 @@ if ( is_singular() ) {
 	add_action( 'wp_footer', 'vwpsh_get_total_shares' );
 	add_action( 'wp_footer', 'vw_the_post_shares' );
 	add_action( 'wp_footer', 'vw_the_post_share_icons' );
-	add_action( 'wp_footer', 'vw_the_post_share_box' );
 }
 
 if ( ! function_exists( 'vwpsh_enqueue_scripts' ) ) {
@@ -132,6 +131,7 @@ if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 	}
 }
 
+add_action( 'wp_footer', 'vw_the_post_share_box' );
 if ( ! function_exists( 'vw_the_post_share_box' ) ) {
 	function vw_the_post_share_box() {
 		return;
