@@ -122,16 +122,17 @@ if ( ! function_exists( 'vw_the_post_shares' ) ) {
 	}
 }
 
+add_action( 'wp_footer', 'vw_the_post_share_icons' );
 if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 	function vw_the_post_share_icons() {
+		echo '<h1>SHARE BOX 2</h1>';
 		get_template_part( 'templates/post-share-icons' );
 	}
 }
 
-add_action( 'wp_footer', 'vw_the_post_share_box' );
+// add_action( 'wp_footer', 'vw_the_post_share_box' );
 if ( ! function_exists( 'vw_the_post_share_box' ) ) {
 	function vw_the_post_share_box() {
-		echo '<h1>SHARRE BOX</h1>';
 		get_template_part( 'templates/post-share-box' );
 	}
 }
