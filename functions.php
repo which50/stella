@@ -68,7 +68,7 @@ require_once get_template_directory().'/inc/breaking-news.php';
 
 require_once get_template_directory().'/inc/instant-search/instant-search.php';
 
-// require_once get_template_directory().'/inc/post-likes/post-likes.php';
+require_once get_template_directory().'/inc/post-likes/post-likes.php';
 
 require_once get_template_directory().'/inc/review/review.php';
 
