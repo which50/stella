@@ -6,7 +6,6 @@ if ( ! defined( 'VW_CONST_POST_SHARES_META_KEY' ) ) define( 'VW_CONST_POST_SHARE
 echo '<h1>SINGLE POST 1</h1>';
 
 if ( is_single() ) {
-	echo '<h1>SINGLE POST 2</h1>';
 	add_action( 'wp_footer', 'vwpsh_render_post_shares_dialog' );
 	add_action( 'wp_enqueue_scripts', 'vwpsh_enqueue_scripts' );
 	add_action( 'wp_footer', 'vwpsh_get_total_shares' );
@@ -138,3 +137,5 @@ if ( ! function_exists( 'vw_the_post_share_box' ) ) {
 		get_template_part( 'templates/post-share-box' );
 	}
 }
+
+echo '<h1>SINGLE POST 2</h1>';
