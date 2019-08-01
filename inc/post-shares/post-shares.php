@@ -1,7 +1,5 @@
 <?php
 
-echo '<h1>TESTING 1 2 3</h1>';
-
 if ( ! defined( 'VW_CONST_POST_SHARES_URL' ) ) define( 'VW_CONST_POST_SHARES_URL', get_template_directory_uri().'/inc/post-shares' );
 if ( ! defined( 'VW_CONST_POST_SHARES_META_KEY' ) ) define( 'VW_CONST_POST_SHARES_META_KEY', 'vw_share_count' );
 
@@ -128,6 +126,7 @@ if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 }
 
 if ( ! function_exists( 'vw_the_post_share_box' ) ) {
+	echo '<h1>SHARE BOX</h1>';
 	function vw_the_post_share_box() {
 		return;
 		get_template_part( 'templates/post-share-box' );
