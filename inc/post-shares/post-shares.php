@@ -130,12 +130,9 @@ if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 	}
 }
 
-add_action( 'wp_footer', 'vw_the_post_share_box' );
-echo '<h1>SHARE 1</h1>';
+// add_action( 'wp_footer', 'vw_the_post_share_box' );
 if ( ! function_exists( 'vw_the_post_share_box' ) ) {
-	echo '<h1>SHARE 2</h1>';
 	function vw_the_post_share_box() {
-		return;
 		get_template_part( 'templates/post-share-box' );
 	}
 }
