@@ -1,0 +1,562 @@
+/* -----------------------------------------------------------------------------
+ * $REVIEW
+ * -------------------------------------------------------------------------- */
+.vw-review {
+    margin-bottom: 25px;
+    padding: 10px 15px;
+    border: 1px solid #3E3E3E;
+}
+.vw-review > :last-child {
+    border-top: 3px solid #3E3E3E;
+}
+
+.vw-review--top-floating .vw-review__total,
+.vw-review--top-floating .vw-review__summary,
+.vw-review--top-floating .vw-review__pros-cons,
+.vw-review--top-floating .vw-review__review-summary,
+.vw-review--top-floating .vw-review__pros,
+.vw-review--top-floating .vw-review__cons {
+    display: block;
+    width: auto;
+    text-align: center;
+}
+.vw-review--top-floating .vw-review__pros {
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 15px;
+}
+.vw-review--top-floating .vw-review__review-summary {
+    padding: 0;
+    margin-top: 15px;
+}
+@media (min-width: 992px) {
+    .vw-review--top-floating {
+        float: left;
+        width: 40%;
+        margin-right: 1.3em;
+    }
+}
+
+.vw-review__title {
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.vw-review__summary {
+    display: table;
+}
+.vw-review__summary > * {
+    display: table-cell;
+}
+
+.vw-review__review-summary {
+    padding-left: 30px;
+    vertical-align: top;
+}
+
+.vw-review__total {
+    display: inline-block;
+    padding: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    line-height: 1em;
+    color: #000000;
+    border: 3px solid #000000;
+}
+.vw-review__total.vw-review__total--percentage span:first-child:after {
+    content: '%';
+    font-size: 0.5em;
+    margin-left: 0.25em;
+}
+
+.vw-review__user-rating,
+.vw-review__pros-cons,
+.vw-review__items {
+    border-top: 1px solid #EEEEEE;
+}
+
+.vw-review__items {
+    padding: 10px 0;
+}
+
+.vw-review__item {
+    position: relative;
+    margin-top: 5px;
+}
+.vw-review__item + .vw-review__item {
+    margin-top: 10px;
+}
+
+.vw-review__item-title {
+    font-style: italic;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.vw-review__item-title span:first-child {
+    font-weight: bold;
+}
+
+.vw-review__item-title-score {
+    font-weight: normal;
+}
+
+.vw-review__item-score {
+    height: 20px;
+    display: block;
+    text-align: center;
+}
+
+/**
+ * User Rating
+ */
+.vw-review__user-rating {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.vw-review__user-rating-score {
+    float: left;
+    display: inline-block;
+}
+.vw-review__user-rating-score img {
+    width: 16px;
+    height: auto;
+    margin-right: 2px;
+}
+
+.vw-review__user-rating-title {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+}
+
+/**
+ * Review Pros/Cons
+ */
+.vw-review__pros-cons {
+    display: table;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.vw-review__pros,
+.vw-review__cons {
+    display: table-cell;
+    width: 50%;
+}
+
+.vw-review__pros {
+    padding-right: 2%;
+}
+
+.vw-review__cons {
+    padding-left: 2%;
+}
+
+.vw-review__pros-title,
+.vw-review__cons-title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.vw-review__pros-summary,
+.vw-review__cons-summary {
+    font-size: 0.9em;
+}
+
+@media (max-width: 767px) {
+    .vw-review__total,
+    .vw-review__summary,
+    .vw-review__pros-cons,
+    .vw-review__review-summary,
+    .vw-review__pros,
+    .vw-review__cons {
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+    .vw-review__pros {
+        border-bottom: 1px solid #EEEEEE;
+        padding-bottom: 15px;
+    }
+    .vw-review__review-summary {
+        padding: 0;
+        margin-top: 15px;
+    }
+}
+
+/* -------------------------------------
+ * $REVIEW SUMMARY */
+.vw-review-summary {
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 10px;
+    background-color: #E8C24F;
+    color: #FFFFFF;
+}
+
+.vw-review-summary__icon {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    margin-bottom: -2px;
+    margin-right: 5px;
+}
+
+/* -------------------------------------
+ * $REVIEW EDITOR */
+#vw_review_editor .field-review-summary,
+#vw_review_editor .field-review-score {
+    display: none;
+}
+#vw_review_editor .review-scores {
+    margin: 15px 0;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 2px;
+    border: 1px solid #DDDDDD;
+}
+#vw_review_editor .review-scores .review-score-row {
+    border: 1px solid #DDDDDD;
+    background-color: #F1F1F1;
+    background: -webkit-linear-gradient(bottom, #ECECEC, #F9F9F9);
+    background:         linear-gradient(to top, #ECECEC, #F9F9F9);
+    border-radius: 2px;
+    padding: 5px 10px 5px 5px;
+    position: relative;
+}
+#vw_review_editor .review-scores .review-score-row i {
+    color: #CCCCCC;
+}
+#vw_review_editor .review-scores .review-score-row i:hover {
+    color: #3FACD6;
+}
+#vw_review_editor .review-scores .review-score-row .move-icon {
+    font-size: 24px;
+    line-height: 1em;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: move;
+}
+#vw_review_editor .review-scores .review-score-row .delete-icon {
+    font-size: 16px;
+    line-height: 1em;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    cursor: pointer;
+    margin-top: -0.5em;
+}
+#vw_review_editor .review-scores .review-score-row .review-score-label {
+    font-size: 11px;
+    color: #666666;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#vw_review_editor .review-scores .review-score-row .rwmb-text {
+    width: 40%;
+    margin-right: 10px;
+}
+#vw_review_editor .review-scores .review-score-row + .review-score-row {
+    margin-top: 5px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Shortcode Editor: TinyMCE
+ * -------------------------------------------------------------------------- */
+.mceButton.mce_vw_shortcodes .mceIcon,
+.mce-vw_shortcodes .mce-ico {
+    background: url(../images/shortcode-icon.png );
+}
+
+/* -----------------------------------------------------------------------------
+ * Shortcode Editor: Field
+ * -------------------------------------------------------------------------- */
+.vwsce-field {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.vwsce-field + .vwsce-field {
+    border-top: 1px solid #EEEEEE;
+}
+.vwsce-field.clearfix:before,
+.vwsce-field.clearfix:after {
+    content: " ";
+    display: table;
+}
+.vwsce-field.clearfix:after {
+    clear: both;
+}
+
+.vwsce-field-title {
+    font-weight: bold;
+}
+
+.vwsce-field-description {
+    font-size: 0.9em;
+    color: #666666;
+}
+
+.vwsce-field-body input[type=text],
+.vwsce-field-body textarea,
+.vwsce-field-body select {
+    width: 100%;
+}
+.vwsce-field-body input[type=text].color-picker {
+    width: 80px;
+}
+.vwsce-field-body textarea {
+    height: 10em;
+}
+
+.vwsce-field.one-column-field .vwsce-field-description {
+    margin-bottom: 15px;
+}
+
+.vwsce-field.two-column-field .vwsce-field-body,
+.vwsce-field.two-column-field .vwsce-field-description-container {
+    width: 49%;
+}
+.vwsce-field.two-column-field .vwsce-field-description-container {
+    float: right;
+}
+
+/* -----------------------------------------------------------------------------
+ * Shortcode Editor: Modal Dialog
+ * -------------------------------------------------------------------------- */
+.modal-title {
+    font-size: 16px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Shortcode Editor: Icon Field
+ * -------------------------------------------------------------------------- */
+.vwsce-available-icons {
+    height: 275px;
+    overflow-y: scroll;
+    padding-left: 1px;
+    border: 1px solid #DDDDDD;
+    margin-left: -1px;
+}
+.vwsce-available-icons i {
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: -2px;
+    margin-top: -2px;
+    font-size: 14px;
+    -webkit-transition: all 0.1s ease-out;
+       -moz-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+}
+.vwsce-available-icons i:hover {
+    color: #FF7700;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: scale(1.2);
+       -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+         -o-transform: scale(1.2);
+            transform: scale(1.2);
+}
+.vwsce-available-icons i:hover:before {
+    font-size: 1.2em;
+}
+.vwsce-available-icons .selected-icon,
+.vwsce-available-icons .selected-icon:hover {
+    color: #FFFFFF;
+    background-color: #1D7BCB;
+}
+
+/* -----------------------------------------------------------------------------
+ * Shortcode Editor: Image Field
+ * -------------------------------------------------------------------------- */
+.vwsce-field-image > img {
+    border: 1px solid #DDDDDD;
+    padding: 5px;
+    border-radius: 3px;
+    max-width: 90%;
+    max-height: 400px;
+    margin-top: 15px;
+}
+.vwsce-field-image .vwsce-insert-media {
+    margin-right: 5px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Shortcode Editor: Custom Bootstrap Modal
+ * -------------------------------------------------------------------------- */
+.modal-open {
+    overflow: hidden;
+}
+
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+    margin-right: 15px;
+}
+
+.vwsce-modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.vwsce-modal.fade .vwsce-modal-dialog {
+    -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+       -moz-transition:    -moz-transform 0.3s ease-out;
+         -o-transition:      -o-transform 0.3s ease-out;
+            transition:         transform 0.3s ease-out;
+}
+
+.vwsce-modal.in .vwsce-modal-dialog {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+
+.vwsce-modal-dialog {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    padding: 10px;
+    z-index: 10001;
+}
+
+.vwsce-modal-content {
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    outline: none;
+}
+
+.vwsce-modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9000;
+    background-color: #000000;
+}
+
+.vwsce-modal-backdrop.fade {
+    opacity: 0;
+}
+
+.vwsce-modal-backdrop.in {
+    opacity: 0.5;
+}
+
+.vwsce-modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #E5E5E5;
+    min-height: 16.428571429px;
+}
+
+.vwsce-modal-header .close {
+    margin-top: -2px;
+}
+
+.vwsce-modal-title {
+    margin: 0;
+    line-height: 1.428571429;
+}
+
+.vwsce-modal-body {
+    position: relative;
+    padding: 20px;
+}
+
+.vwsce-modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #E5E5E5;
+}
+
+.vwsce-modal-footer:before,
+.vwsce-modal-footer:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.vwsce-modal-footer:after {
+    clear: both;
+}
+
+.vwsce-modal-footer .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.vwsce-modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+}
+
+.vwsce-modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .vwsce-modal-dialog {
+        left: 50%;
+        right: auto;
+        width: 600px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .vwsce-modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.modal-backdrop {
+    z-index: 2000;
+}
+
+.vwsce-modal {
+    z-index: 3000;
+}
+
+/* -----------------------------------------------------------------------------
+ * Mega Menu Editor
+ * -------------------------------------------------------------------------- */
+#menu-to-edit .vw-mega-menu-option {
+    display: none;
+}
+
+#menu-to-edit .menu-item-depth-0 .vw-mega-menu-option {
+    display: block;
+}
