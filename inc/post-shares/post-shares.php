@@ -3,8 +3,10 @@
 if ( ! defined( 'VW_CONST_POST_SHARES_URL' ) ) define( 'VW_CONST_POST_SHARES_URL', get_template_directory_uri().'/inc/post-shares' );
 if ( ! defined( 'VW_CONST_POST_SHARES_META_KEY' ) ) define( 'VW_CONST_POST_SHARES_META_KEY', 'vw_share_count' );
 
+echo '<h1>SINGLE POST 1</h1>';
+
 if ( is_single() ) {
-	echo '<h1>SINGLE POST</h1>';
+	echo '<h1>SINGLE POST 2</h1>';
 	add_action( 'wp_footer', 'vwpsh_render_post_shares_dialog' );
 	add_action( 'wp_enqueue_scripts', 'vwpsh_enqueue_scripts' );
 	add_action( 'wp_footer', 'vwpsh_get_total_shares' );
