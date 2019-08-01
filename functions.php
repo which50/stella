@@ -1309,4 +1309,6 @@ function mtb_canonical_ssl($url) {
 }
 add_filter( 'wpseo_canonical', 'mtb_canonical_ssl' );
 
+echo '<h1>TEST COMMIT HERE</h1>';
+
 
