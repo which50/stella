@@ -3,8 +3,6 @@
 if ( ! defined( 'VW_CONST_POST_SHARES_URL' ) ) define( 'VW_CONST_POST_SHARES_URL', get_template_directory_uri().'/inc/post-shares' );
 if ( ! defined( 'VW_CONST_POST_SHARES_META_KEY' ) ) define( 'VW_CONST_POST_SHARES_META_KEY', 'vw_share_count' );
 
-echo '<h1>SINGLE POST 1</h1>';
-
 if ( is_singular() ) {
 	add_action( 'wp_footer', 'vwpsh_render_post_shares_dialog' );
 	add_action( 'wp_enqueue_scripts', 'vwpsh_enqueue_scripts' );
@@ -130,9 +128,10 @@ if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 	}
 }
 
-// add_action( 'wp_footer', 'vw_the_post_share_box' );
+add_action( 'wp_footer', 'vw_the_post_share_box' );
 if ( ! function_exists( 'vw_the_post_share_box' ) ) {
 	function vw_the_post_share_box() {
+		echo '<h1>SHARRE BOX</h1>';
 		get_template_part( 'templates/post-share-box' );
 	}
 }
