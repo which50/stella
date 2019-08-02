@@ -128,7 +128,7 @@ if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 	}
 }
 
-add_action( 'the_content', 'vw_the_post_share_box' );
+add_filter( 'the_content', 'vw_the_post_share_box' );
 if ( ! function_exists( 'vw_the_post_share_box' ) ) {
 	function vw_the_post_share_box() {
 		get_template_part( 'templates/post-share-box' );
