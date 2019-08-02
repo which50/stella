@@ -10,44 +10,6 @@ if ( ! defined( 'VW_CONST_POST_SHARES_META_KEY' ) ) define( 'VW_CONST_POST_SHARE
 // 	add_action( 'wp_footer', 'vw_the_post_shares' );
 // 	add_action( 'wp_footer', 'vw_the_post_share_icons' );
 // }
-
-function wpse8170_loop() {
-	$loop = 'not found';
-
-    if ( is_page() ) {
-        $loop = is_front_page() ? 'front' : 'page';
-    } elseif ( is_home() ) {
-        $loop = 'home';
-    } elseif ( is_single() ) {
-        $loop = ( is_attachment () ) ? 'attachment' : 'single';
-    } elseif ( is_category() ) {
-        $loop = 'category';
-    } elseif ( is_tag() ) {
-        $loop = 'tag';
-    } elseif ( is_tax() ) {
-        $loop = 'tax';
-    } elseif ( is_archive() ) {
-        if ( is_day() ) {
-            $loop = 'day';
-        } elseif ( is_month() ) {
-            $loop = 'month';
-        } elseif ( is_year() ) {
-            $loop = 'year';
-        } elseif ( is_author() ) {
-            $loop = 'author';
-        } else {
-            $loop = 'archive';
-        }
-    } elseif ( is_search() ) {
-        $loop = 'search';
-    } elseif ( is_404() ) {
-        $loop = 'notfound';
-    }
-
-    echo '<h1>' . $loop . '</h1>';
-}
-
-wpse8170_loop();
 	
 if ( ! function_exists( 'vwpsh_enqueue_scripts' ) ) {
 	function vwpsh_enqueue_scripts() {
@@ -166,9 +128,6 @@ if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 	}
 }
 
-// add_filter( 'the_content', 'vw_the_post_share_box' );
-if ( ! function_exists( 'vw_the_post_share_box' ) ) {
-	function vw_the_post_share_box() {
-		get_template_part( 'templates/post-share-box' );
-	}
+function vw_the_post_share_box() {
+	get_template_part( 'templates/post-share-box' );
 }
