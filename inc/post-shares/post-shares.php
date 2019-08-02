@@ -129,5 +129,6 @@ if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 }
 
 function vw_the_post_share_box() {
+	echo '<h1>TEST</h1>';
 	get_template_part( 'templates/post-share-box' );
 }
