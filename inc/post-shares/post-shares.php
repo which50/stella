@@ -11,11 +11,44 @@ if ( ! defined( 'VW_CONST_POST_SHARES_META_KEY' ) ) define( 'VW_CONST_POST_SHARE
 // 	add_action( 'wp_footer', 'vw_the_post_share_icons' );
 // }
 
-if ( is_single() ) {
-	echo '<h1>SINGLE</h1>';
-} else {
-	echo '<h1>NOT SINGLE</h1>';
+function wpse8170_loop() {
+    global $wp_query;
+    $loop = 'notfound';
+
+    if ( $wp_query->is_page ) {
+        $loop = is_front_page() ? 'front' : 'page';
+    } elseif ( $wp_query->is_home ) {
+        $loop = 'home';
+    } elseif ( $wp_query->is_single ) {
+        $loop = ( $wp_query->is_attachment ) ? 'attachment' : 'single';
+    } elseif ( $wp_query->is_category ) {
+        $loop = 'category';
+    } elseif ( $wp_query->is_tag ) {
+        $loop = 'tag';
+    } elseif ( $wp_query->is_tax ) {
+        $loop = 'tax';
+    } elseif ( $wp_query->is_archive ) {
+        if ( $wp_query->is_day ) {
+            $loop = 'day';
+        } elseif ( $wp_query->is_month ) {
+            $loop = 'month';
+        } elseif ( $wp_query->is_year ) {
+            $loop = 'year';
+        } elseif ( $wp_query->is_author ) {
+            $loop = 'author';
+        } else {
+            $loop = 'archive';
+        }
+    } elseif ( $wp_query->is_search ) {
+        $loop = 'search';
+    } elseif ( $wp_query->is_404 ) {
+        $loop = 'notfound';
+    }
+
+    echo '<h1>' . $loop . '</h1>';
 }
+
+wpse8170_loop();
 	
 if ( ! function_exists( 'vwpsh_enqueue_scripts' ) ) {
 	function vwpsh_enqueue_scripts() {
