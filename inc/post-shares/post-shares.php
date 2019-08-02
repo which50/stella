@@ -11,6 +11,10 @@ if ( ! defined( 'VW_CONST_POST_SHARES_META_KEY' ) ) define( 'VW_CONST_POST_SHARE
 // 	add_action( 'wp_footer', 'vw_the_post_share_icons' );
 // }
 
+if ( is_single() ) {
+	echo '<h1>HEY THERE</h1>';
+}
+
 if ( ! function_exists( 'vwpsh_enqueue_scripts' ) ) {
 	function vwpsh_enqueue_scripts() {
 		if ( is_single() ) {
