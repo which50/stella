@@ -12,9 +12,11 @@ if ( ! defined( 'VW_CONST_POST_SHARES_META_KEY' ) ) define( 'VW_CONST_POST_SHARE
 // }
 
 if ( is_single() ) {
-	echo '<h1>HEY THERE</h1>';
+	echo '<h1>SINGLE</h1>';
+} else {
+	echo '<h1>NOT SINGLE</h1>';
 }
-
+	
 if ( ! function_exists( 'vwpsh_enqueue_scripts' ) ) {
 	function vwpsh_enqueue_scripts() {
 		if ( is_single() ) {
