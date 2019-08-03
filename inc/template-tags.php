@@ -495,6 +495,7 @@ if ( ! function_exists( 'vw_the_post_footer_sections' ) ) {
 				comments_template();
 
 			} else {
+				echo '<h1>FOOTER POST</h1>';
 				// For 'custom-1', 'custom-2' or else
 				get_template_part( 'templates/post-footer-section-'.$slug );
 
