@@ -128,7 +128,10 @@ if ( ! function_exists( 'vw_the_post_share_icons' ) ) {
 	}
 }
 
-function vw_the_post_share_box() {
-	echo '<h1>TEST</h1>';
-	get_template_part( 'templates/post-share-box' );
+add_filter( 'the_content', 'vw_the_post_share_box' );
+if ( ! function_exists( 'vw_the_post_share_box' ) ) {
+	function vw_the_post_share_box( $content ) {
+		$content .= get_template_part( 'templates/post-share-box' );
+		return $content;
+	}
 }
