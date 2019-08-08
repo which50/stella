@@ -62,16 +62,6 @@ $linkedin_url = sprintf( 'https://www.linkedin.com/sharing/share-offsite/?url=%s
 
 
 
-	<a class="vw-post-share-box-button vw-post-shares-social vw-post-shares-social-pinterest" href="<?php echo esc_url( $pinterest_url ); ?>" data-post-id="<?php echo esc_attr( $post_id ); ?>" data-share-to="pinterest" data-width="750" data-height="300" title="<?php echo esc_attr__( 'Share to Pinterest', 'envirra' );?>">
-
-		<i class="vw-icon icon-social-pinterest"></i>
-
-		<span class="vw-button-label"><?php _e( 'Pinterest', 'envirra' ); ?></span>
-
-	</a>
-
-
-
 	<a class="vw-post-share-box-button vw-post-shares-social vw-post-shares-social-linkedin" href="<?php echo esc_url( $linkedin_url ); ?>" data-post-id="<?php echo esc_attr( $post_id ); ?>" data-share-to="linkedin" data-width="500" data-height="475" title="<?php echo esc_attr__( 'Share to LinkedIn', 'envirra' );?>">
 
 		<i class="vw-icon icon-social-linkedin"></i>
