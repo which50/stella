@@ -262,14 +262,8 @@ p {
     margin-bottom: 1.3em;
 }
 
-body.postid-49590 {
-    font-family: Garamond, serif;
-    font-size: 18px;
-    line-height: 1.4;
-}
-
-body.postid-49699 {
-    font-size: 15px;
+body.postid-49699 .vw-post-content {
+    font-size: 16px;
 }
 
 
