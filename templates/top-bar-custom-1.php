@@ -6,7 +6,7 @@
 
  * -------------------------------------------------------------------------- */
 
-echo '<!-- TEST COMMENT -->';
+echo '<!-- TEST COMMENT 1 -->';
 include( 'top-bar-menu-social.php' );
 
 ?>
