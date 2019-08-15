@@ -6,6 +6,6 @@
 
  * -------------------------------------------------------------------------- */
 
-// include( 'top-bar-menu-social.php' );
+include( 'top-bar-menu-social.php' );
 
 ?>
