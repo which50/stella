@@ -1,4 +1,4 @@
-<!-- Top Bar (edited) -->
+<!-- Top Bar (edited new) -->
 
 <div class="vw-top-bar vw-top-bar--menu-social">
 
