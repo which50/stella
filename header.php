@@ -23,7 +23,7 @@
 
 		<!-- Site Wrapper -->
 
-		<div class="vw-site-wrapper marto">
+		<div class="vw-site-wrapper">
 
 
 
