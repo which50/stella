@@ -1,14 +1,10 @@
 <?php
 
-global $vw_secondary_query;
-
-if ( empty( $vw_secondary_query ) ) return;
+query_posts( 'tag=featured' );
 
 ?>
 
-
-
-<div class="vw-loop vw-loop--slider vw-loop--slider-large marto">
+<div class="vw-loop vw-loop--slider vw-loop--slider-large marto-1">
 
 	<div class="clearfix"></div>
 
@@ -22,7 +18,7 @@ if ( empty( $vw_secondary_query ) ) return;
 
 					<div class="swiper-wrapper">
 
-					<?php while ( $vw_secondary_query->have_posts() ) : $vw_secondary_query->the_post(); ?>
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 						<div class="swiper-slide">
 
@@ -30,7 +26,7 @@ if ( empty( $vw_secondary_query ) ) return;
 
 						</div>
 
-					<?php endwhile; ?>
+					<?php endwhile; endif; ?>
 
 					</div>
 
