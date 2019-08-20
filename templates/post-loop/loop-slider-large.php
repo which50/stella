@@ -1,10 +1,14 @@
 <?php
 
-$query = new WP_Query( array( 'tag' => 'Featured' ) );
+global $vw_secondary_query;
+
+$vw_secondary_query = new WP_Query( array( 'tag' => 'Featured' ) );
+
+if ( empty( $vw_secondary_query ) ) return;
 
 ?>
 
-<div class="vw-loop vw-loop--slider vw-loop--slider-large marto-3">
+<div class="vw-loop vw-loop--slider vw-loop--slider-large">
 
 	<div class="clearfix"></div>
 
@@ -18,7 +22,7 @@ $query = new WP_Query( array( 'tag' => 'Featured' ) );
 
 					<div class="swiper-wrapper">
 
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<?php while ( $vw_secondary_query->have_posts() ) : $vw_secondary_query->the_post(); ?>
 
 						<div class="swiper-slide">
 
@@ -26,7 +30,7 @@ $query = new WP_Query( array( 'tag' => 'Featured' ) );
 
 						</div>
 
-					<?php endwhile; endif; ?>
+					<?php endwhile; ?>
 
 					</div>
 
