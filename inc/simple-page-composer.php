@@ -322,8 +322,6 @@ if ( ! function_exists( 'vw_render_spc_section_post_slider' ) ) {
 
 		vw_the_post_slider( $slider_args );
 
-		echo '<!-- CAROUSEL HERE -->';
-
 		if ( 'show' == $additional_posts ) {
 			$additional_query = vw_build_post_slider_query( $slider_args );
 			$additional_query['posts_per_page'] = 4;
