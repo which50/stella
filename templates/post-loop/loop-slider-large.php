@@ -1,6 +1,6 @@
 <?php
 
-query_posts( 'tag=featured' );
+query_posts( 'tag=Featured' );
 
 ?>
 
