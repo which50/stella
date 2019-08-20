@@ -4,7 +4,7 @@ query_posts( 'tag=Featured' );
 
 ?>
 
-<div class="vw-loop vw-loop--slider vw-loop--slider-large marto-1">
+<div class="vw-loop vw-loop--slider vw-loop--slider-large marto-2">
 
 	<div class="clearfix"></div>
 
