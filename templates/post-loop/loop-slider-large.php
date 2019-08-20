@@ -1,10 +1,10 @@
 <?php
 
-query_posts( 'tag=Featured' );
+$query = new WP_Query( array( 'tag' => 'Featured' ) );
 
 ?>
 
-<div class="vw-loop vw-loop--slider vw-loop--slider-large marto-2">
+<div class="vw-loop vw-loop--slider vw-loop--slider-large marto-3">
 
 	<div class="clearfix"></div>
 
