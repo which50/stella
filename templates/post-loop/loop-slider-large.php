@@ -2,7 +2,7 @@
 
 global $vw_secondary_query;
 
-var_dump( $vw_secondary_query );
+?><!-- <?php var_dump( count( $vw_secondary_query ) ); ?> --><?php
 
 // $vw_secondary_query = new WP_Query( array( 'tag' => 'Featured' ) );
 
