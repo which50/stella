@@ -322,7 +322,7 @@ if ( ! function_exists( 'vw_render_spc_section_post_slider' ) ) {
 
 		vw_the_post_slider( $slider_args );
 
-		echo '<h1>' . $number_of_slide . '</h1>';
+		echo '<h1>' . get_post_meta( $page_id, '', true ) . '</h1>';
 
 		if ( 'show' == $additional_posts ) {
 			$additional_query = vw_build_post_slider_query( $slider_args );
