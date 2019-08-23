@@ -723,10 +723,11 @@ if ( ! function_exists( 'vw_build_post_slider_query' ) ) {
 			// do nothing, it's a default ordering
 
 		} elseif ( $args['posts_order'] == 'latest_featured' ) {
+			$query_args['orderby'] = 'modified';
 			$query_args['meta_query'][] = array(
 				'key' => 'vw_post_featured',
 				'value' => '1',
-				'orderby' => 'modified',
+				'compare' => '=',
 			);
 
 		} elseif ( $args['posts_order'] == 'latest_reviews' ) {
