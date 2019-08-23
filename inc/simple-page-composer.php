@@ -327,7 +327,7 @@ if ( ! function_exists( 'vw_render_spc_section_post_slider' ) ) {
 			$additional_query['posts_per_page'] = 4;
 			$additional_query['offset'] = $number_of_slide;
 
-			echo '<div class="container vw-additional-posts test1"><div class="row"><div class="col-md-12">';
+			echo '<div class="container vw-additional-posts test3"><div class="row"><div class="col-md-12">';
 			
 			$vw_secondary_query = new WP_Query( $additional_query );
 

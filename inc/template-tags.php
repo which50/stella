@@ -725,7 +725,7 @@ if ( ! function_exists( 'vw_build_post_slider_query' ) ) {
 		} elseif ( $args['posts_order'] == 'latest_featured' ) {
 			$query_args['meta_query'][] = array(
 				'key' => 'vw_post_featured',
-				'value' => '1',
+				// 'value' => '1',
 				'compare' => '=',
 			);
 
