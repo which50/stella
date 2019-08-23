@@ -322,14 +322,14 @@ if ( ! function_exists( 'vw_render_spc_section_post_slider' ) ) {
 
 		vw_the_post_slider( $slider_args );
 
-		echo '<h1>' . get_post_meta( $page_id, '', true ) . '</h1>';
+		echo '<!--' . var_dump( get_post_meta( $page_id, '', true ) ) . '-->';
 
 		if ( 'show' == $additional_posts ) {
 			$additional_query = vw_build_post_slider_query( $slider_args );
 			$additional_query['posts_per_page'] = 4;
 			$additional_query['offset'] = $number_of_slide;
 
-			echo '<div class="container vw-additional-posts test2"><div class="row"><div class="col-md-12">';
+			echo '<div class="container vw-additional-posts test1"><div class="row"><div class="col-md-12">';
 			
 			$vw_secondary_query = new WP_Query( $additional_query );
 
