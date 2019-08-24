@@ -141,7 +141,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 
 			?>
 
-			<div class="vw-fixed-tab vw-fixed-tab-3-cols clearfix">
+			<div class="vw-fixed-tab vw-fixed-tab-3-cols clearfix testy">
 
 				<ul>
 
