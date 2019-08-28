@@ -144,7 +144,7 @@ require_once get_template_directory().'/widgets/widget-latest-comments.php';
 
 require_once get_template_directory().'/widgets/widget-login.php';
 
-require_once get_template_directory().'/widgets/widget-popular-post-new.php';
+require_once get_template_directory().'/widgets/widget-popular-post.php';
 
 require_once get_template_directory().'/widgets/widget-posts.php';
 
