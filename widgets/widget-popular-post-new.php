@@ -181,13 +181,12 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 								console.log( ls.getItem( queryDate ) );
 								renderList( JSON.parse( ls.getItem( queryContainer ) ) );
 							} else {
-								console.log('test1');
 								if ( ls ) {
 									ls.setItem( queryDate, JSON.stringify( new Date() ) );
 								}
 
 								gapi.auth.authorize(authData, function( response ) {
-									console.log('test2');
+									console.log(response);
 									if ( !response.error ) {
 										queryAccounts();
 									}
