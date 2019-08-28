@@ -169,8 +169,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 				function authorise() {
 					var authData = {
 							client_id: config.clientID,
-							scope: config.scopes,
-							immediate: false
+							scope: config.scopes
 						};
 
 					var i = setInterval(function() {
@@ -186,7 +185,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 								}
 
 								gapi.auth.authorize(authData, function( response ) {
-									console.log(response);
+									console.error(response);
 									if ( !response.error ) {
 										queryAccounts();
 									}
