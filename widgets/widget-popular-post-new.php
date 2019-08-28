@@ -170,7 +170,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 					var authData = {
 							client_id: config.clientID,
 							scope: config.scopes,
-							immediate: true
+							immediate: false
 						};
 
 					var i = setInterval(function() {
