@@ -173,6 +173,8 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 							immediate: true
 						};
 
+						console.log('test');
+
 					var i = setInterval(function() {
 						if ( gapi && gapi.auth ) {
 							clearInterval( i );
