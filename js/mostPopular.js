@@ -7,7 +7,7 @@
 			scopes   : [ 'https://www.googleapis.com/auth/analytics.readonly' ],
 			account  : 'Which-50',
 			limit    : 50,
-			maxShow  : <?php echo $count; ?>,
+			maxShow  : 5,
 			domain   : 'www.which-50.com'
 		},
 		range = {
