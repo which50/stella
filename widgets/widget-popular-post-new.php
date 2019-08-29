@@ -23,19 +23,17 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 			);
 		}
 
-		function widget( $instance ) {
-			$count = intval( $instance['count'] );
+		function widget( $args, $instance ) {
+			extract($args);
 
-			echo '<div style="display: none;">' . var_dump( $instance ) . '</div>';
+			$count = intval( $instance['count'] );
 
 			if ( function_exists( 'icl_t' ) ) {
 				$instance['title'] = icl_t( VW_THEME_NAME.' Widget', $this->id.'_title', $instance['title'] );
-				echo '<div style="display: none;">TITLE 1</div>';
 			}
 
 			if ( ! empty( $instance['title'] ) ) {
 				$title = apply_filters( 'widget_title', wp_kses_data( $instance['title'] ), $instance, $this->id_base);
-				echo '<div style="display: none;">TITLE 2</div>';
 			}
 
 			echo $before_widget;
@@ -46,7 +44,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 
 			?>
 
-			<div id="most-popular-list" class="tabs tabbed-list">
+			<div id="most-popular-list" class="tabs tabbed-lists">
 				<div class="tab">
 					<input type="radio" id="tab-1" name="tab-group-1" checked>
 					<label id="tab-label-1" for="tab-1">Week</label>
