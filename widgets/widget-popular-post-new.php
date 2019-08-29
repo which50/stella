@@ -51,7 +51,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 
 			?>
 
-			<div id="most-popular-list" class="tabs tabbed-lists">
+			<div id="most-popular-list" class="tabs tabbed-listy">
 				<div class="tab">
 					<input type="radio" id="tab-1" name="tab-group-1" checked>
 					<label id="tab-label-1" for="tab-1">Week</label>
