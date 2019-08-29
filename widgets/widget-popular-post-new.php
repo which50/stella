@@ -24,6 +24,8 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 		}
 
 		function widget( $instance ) {
+			$count = intval( $instance['count'] );
+
 			if ( function_exists( 'icl_t' ) ) {
 				$instance['title'] = icl_t( VW_THEME_NAME.' Widget', $this->id.'_title', $instance['title'] );
 			}
@@ -75,7 +77,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 						scopes   : [ 'https://www.googleapis.com/auth/analytics.readonly' ],
 						account  : 'Which-50',
 						limit    : 50,
-						maxShow  : 5,
+						maxShow  : <?php echo $count; ?>,
 						domain   : 'www.which-50.com'
 					},
 					range = {
