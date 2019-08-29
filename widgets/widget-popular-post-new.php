@@ -26,17 +26,23 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 		function widget( $instance ) {
 			$count = intval( $instance['count'] );
 
+			echo '<!-- COUNT <?php echo $count; ?> -->';
+
 			if ( function_exists( 'icl_t' ) ) {
 				$instance['title'] = icl_t( VW_THEME_NAME.' Widget', $this->id.'_title', $instance['title'] );
+				echo '<!-- TITLE 1 -->';
 			}
 
 			if ( ! empty( $instance['title'] ) ) {
 				$title = apply_filters( 'widget_title', wp_kses_data( $instance['title'] ), $instance, $this->id_base);
+				echo '<!-- TITLE 2 -->';
 			}
 
 			echo $before_widget;
 
-			if ( $instance['title'] ) echo $before_title . $title . $after_title;
+			if ( $instance['title'] ) {
+				echo $before_title . $title . $after_title;
+			}
 
 			?>
 
