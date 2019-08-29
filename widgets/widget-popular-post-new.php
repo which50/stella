@@ -26,7 +26,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 		function widget( $instance ) {
 			$count = intval( $instance['count'] );
 
-			echo '<div style="display: none;"><?php var_dump( $instance ); ?></div>';
+			echo '<div style="display: none;">' . var_dump( $instance ) . '</div>';
 
 			if ( function_exists( 'icl_t' ) ) {
 				$instance['title'] = icl_t( VW_THEME_NAME.' Widget', $this->id.'_title', $instance['title'] );
@@ -46,7 +46,7 @@ if ( ! class_exists( 'Vw_widget_popular_post' ) ) {
 
 			?>
 
-			<div id="most-popular-list" class="tabs tabbed-lists">
+			<div id="most-popular-list" class="tabs tabbed-list">
 				<div class="tab">
 					<input type="radio" id="tab-1" name="tab-group-1" checked>
 					<label id="tab-label-1" for="tab-1">Week</label>
