@@ -223,8 +223,6 @@ if ( ! function_exists( 'vw_enqueue_scripts_backstretch' ) ) {
 									});
 
 									clearInterval( listener );
-								} else {
-									listener();
 								}
 							}, 500 );
 						} );
