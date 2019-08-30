@@ -181,76 +181,82 @@ if ( ! function_exists( 'vw_enqueue_scripts_backstretch' ) ) {
 
 
 				<script type='text/javascript'>
+					(function( jQuery ) {
+						"use strict";
 
-					"use strict";
+						jQuery(function() {
 
-					if ( jQuery.backstretch ) {
+							if ( jQuery.backstretch ) {
 
-						var $target = jQuery( '.vw-page-title-section__inner' );
+								var $target = jQuery( '.vw-page-title-section__inner' );
 
-						$target.backstretch(
+								$target.backstretch(
 
-							['<?php echo implode( "','", $image_urls ) ?>'], {
+									['<?php echo implode( "','", $image_urls ) ?>'], {
 
-								fade: <?php echo VW_CONST_BACKSTRETCH_OPT_FADE; ?>,
+										fade: <?php echo VW_CONST_BACKSTRETCH_OPT_FADE; ?>,
 
-								centeredY: <?php echo VW_CONST_BACKSTRETCH_OPT_CENTEREDY; ?>,
+										centeredY: <?php echo VW_CONST_BACKSTRETCH_OPT_CENTEREDY; ?>,
 
-								centeredX: <?php echo VW_CONST_BACKSTRETCH_OPT_CENTEREDX; ?>,
+										centeredX: <?php echo VW_CONST_BACKSTRETCH_OPT_CENTEREDX; ?>,
 
-								duration: <?php echo VW_CONST_BACKSTRETCH_OPT_DURATION; ?>,
+										duration: <?php echo VW_CONST_BACKSTRETCH_OPT_DURATION; ?>,
+
+									}
+
+								);
+
+
+
+								jQuery( '.vw-page-title-section' )
+
+									.removeClass( 'vw-page-title-section--no-background' )
+
+									.addClass( 'vw-backstretch vw-page-title-section--has-background' );
+
+
+
+								var $image_captions = jQuery( '#vw-backstretch-image-captions-template' ).html();
+
+								$target.prepend( $image_captions );
+
+
+
+								jQuery( '.vw-page-title-section__gallery-button--next' ).click( function( e ) {
+
+									e.preventDefault();
+
+									$target.backstretch("next");
+
+								} );
+
+
+
+								jQuery( '.vw-page-title-section__gallery-button--prev' ).click( function( e ) {
+
+									e.preventDefault();
+
+									$target.backstretch("prev");
+
+								} );
+
+
+
+								jQuery(window).on("backstretch.after", function (e, instance, index) {
+
+									jQuery( '.vw-page-title-image-captions .vw-featured-image-caption' )
+
+										.addClass( 'hidden' )
+
+										.eq( index ).removeClass( 'hidden' );
+
+								});
 
 							}
 
-						);
-
-
-
-						jQuery( '.vw-page-title-section' )
-
-							.removeClass( 'vw-page-title-section--no-background' )
-
-							.addClass( 'vw-backstretch vw-page-title-section--has-background' );
-
-
-
-						var $image_captions = jQuery( '#vw-backstretch-image-captions-template' ).html();
-
-						$target.prepend( $image_captions );
-
-
-
-						jQuery( '.vw-page-title-section__gallery-button--next' ).click( function( e ) {
-
-							e.preventDefault();
-
-							$target.backstretch("next");
-
-						} );
-
-
-
-						jQuery( '.vw-page-title-section__gallery-button--prev' ).click( function( e ) {
-
-							e.preventDefault();
-
-							$target.backstretch("prev");
-
-						} );
-
-
-
-						jQuery(window).on("backstretch.after", function (e, instance, index) {
-
-							jQuery( '.vw-page-title-image-captions .vw-featured-image-caption' )
-
-								.addClass( 'hidden' )
-
-								.eq( index ).removeClass( 'hidden' );
-
 						});
 
-					}
+					})( window.jQuery );
 
 				</script>
 
