@@ -315,7 +315,7 @@ if ( ! function_exists( 'vw_render_spc_section_post_slider' ) ) {
 
 		$slider_args = array(
 			'cat' => $category,
-			'posts_order' => 'latest_featured',
+			'posts_order' => $posts_order,
 			'number_of_post' => 5,
 			'template' => 'large',
 		);
