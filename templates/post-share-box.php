@@ -18,13 +18,13 @@ if ( has_post_thumbnail() ) {
 
 
 
-$facebook_url = sprintf( 'http://www.facebook.com/sharer.php?u=%s', $post_url );
+$facebook_url = sprintf( 'https://www.facebook.com/sharer.php?u=%s', $post_url );
 
-$twitter_url = sprintf( 'http://twitter.com/home?status=%s', $post_title.'%20-%20'.$post_url );
+$twitter_url = sprintf( 'https://twitter.com/intent/tweet?url=%s', $post_title.'%20-%20'.$post_url );
 
-$pinterest_url = sprintf( 'http://pinterest.com/pin/create/button/?url=%s&media=%s&description=%s', $post_url, $thumbnail_url, $post_title );
+$pinterest_url = sprintf( 'https://pinterest.com/pin/create/button/?url=%s&media=%s&description=%s', $post_url, $thumbnail_url, $post_title );
 
-$gplus_url = sprintf( 'http://plus.google.com/share?url=%s', $post_url );
+$gplus_url = sprintf( 'https://plus.google.com/share?url=%s', $post_url );
 
 $linkedin_url = sprintf( 'https://www.linkedin.com/sharing/share-offsite/?url=%s', $post_url );
 
