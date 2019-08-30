@@ -20,7 +20,7 @@ if ( has_post_thumbnail() ) {
 
 $facebook_url = sprintf( 'https://www.facebook.com/sharer.php?u=%s', $post_url );
 
-$twitter_url = sprintf( 'https://twitter.com/intent/tweet?url=%s', $post_title.'%20-%20'.$post_url );
+$twitter_url = sprintf( 'https://twitter.com/intent/tweet?url=%s', $post_url );
 
 $pinterest_url = sprintf( 'https://pinterest.com/pin/create/button/?url=%s&media=%s&description=%s', $post_url, $thumbnail_url, $post_title );
 
